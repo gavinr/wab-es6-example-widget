@@ -1,9 +1,9 @@
-define([
-    'dojo/_base/declare',
-    'jimu/BaseWidget'
-], (declare, BaseWidget) => {
+import declare from 'dojo/_base/declare';
+import BaseWidget from 'jimu/BaseWidget';
+
     //To create a widget, you need to derive from BaseWidget.
-    return declare([BaseWidget], {
+    export default declare([BaseWidget], {
+
         baseClass: 'MyWidget',
         // add additional properties here
 
@@ -42,4 +42,3 @@ define([
         // }
         //methods to communication between widgets:
     });
-});
