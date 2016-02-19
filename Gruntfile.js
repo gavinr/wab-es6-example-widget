@@ -2,14 +2,15 @@ module.exports = function(grunt) {
   'use strict';
   require('load-grunt-tasks')(grunt);
 
-  var appDir = 'C:/code/arcgis-web-appbuilder-1.3/server/apps/3';
+  var appDir = 'C:/code/arcgis-web-appbuilder-1.3/server/apps/8';
   var stemappDir = 'C:/code/arcgis-web-appbuilder-1.3/client/stemapp';
   grunt.initConfig({
     babel: {
       options: {
         sourceMap: true,
-        presets: ['es2015-without-strict', 'stage-0'] // blacklisting 'strict' until dojo2 fixes class declarations. see http://dojo-toolkit.33424.n3.nabble.com/A-line-to-use-instead-of-quot-this-inherited-arguments-quot-in-strict-mode-td3999709.html
-        // plugins: ['transform-es2015-modules-amd']
+        // blacklisting 'strict' until dojo2 fixes class declarations. see http://dojo-toolkit.33424.n3.nabble.com/A-line-to-use-instead-of-quot-this-inherited-arguments-quot-in-strict-mode-td3999709.html
+        presets: ['es2015-without-strict', 'stage-0'],
+        plugins: ['transform-es2015-modules-simple-amd']
       },
       dev: {
         files: [{
